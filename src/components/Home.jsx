@@ -3,7 +3,7 @@ import homeImg from "../assets/pic/hero.jpg"
 
 function Home() {
   return (
-    <div className='w-full flex flex-col md:flex-row justify-evenly items-center my-[20vh] py-8 gap-1'>
+    <div className='w-full flex flex-col md:flex-row justify-evenly items-center my-[15vh] py-8 gap-1'>
         <div className='w-[90%] md:w-[30%] flex justify-center'>
           <img src={homeImg} alt="Main Image " className='w-full h-auto sm:h-60 md:h-80 lg:h-[30rem] object-cover'/>
         </div>
