@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import person1 from "../assets/team_pic/member1.jpg"
 import person2 from "../assets/team_pic/member2.jpg"
 import person3 from "../assets/team_pic/member3.jpg"
@@ -9,8 +9,11 @@ import person7 from "../assets/team_pic/member7.jpg"
 import person8 from "../assets/team_pic/member8.jpg"
 import person9 from "../assets/team_pic/member9.jpg"
 import person10 from "../assets/team_pic/member10.jpg"
-import { FaInstagramSquare, FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin  } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 const teamData = [
@@ -139,31 +142,31 @@ const teamData = [
 function Team() {
   return (
     <div className='min-h-screen bg-gray-500'>
-        <h1 className='text-[4em] text-center mb-[10vh] pt-8'><b>Our Team</b></h1>
-        <div className=' flex flex-wrap justify-center place-items-center gap-8'>
+        <h1 className='text-[2em] md:text-[3em] lg:text-[4em] text-center mb-[10vh] pt-8'><b>Our Team</b></h1>
+        <div className='flex flex-wrap justify-center place-items-center gap-8 px-32'>
             {
                teamData.map(({id, img, name, designation, socialMediaLinks}) =>{
                 return(
-                    <div key={id} className='bg-white p-20 shadow-lg rounded-lg text-center'>
+                    <div key={id} className='group w-80 bg-white p-8 shadow-lg hover:rounded-3xl border border-transparent hover:bg-transparent hover:text-[#2b1fb0] hover:border-blue-800 text-center transition-all duration-300'>
                          <div className='w-32 h-32 mx-auto mb-4'>
                             <img src={img} alt="Member Image" className='w-full h-full rounded-full object-cover transition-transform duration-300 group-hover:scale-110' />
                         </div>
                         <h2 className='text-xl font-semibold mb-2'>{name}</h2>
                         <p className='text-md mb-4 text-gray-600'>{designation}</p>
-                        <div className='absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                            <div className='flex gap-3'>
+                        <div className='w-full flex items-center mt-4 '>
+                            <div className='w-full flex justify-evenly '>
                                     {
                                      socialMediaLinks.linkdeIn && (
-                                        <a href="socialMediaLinks.linkdeIn" target='_blank' className='text-2xl text-blue-600'><FaLinkedin/></a>
+                                        <a href="socialMediaLinks.linkdeIn" target='_blank' className='text-2xl text-blue-400 hover:text-[#0077B5] transition-all duration-300'> <FontAwesomeIcon icon={faLinkedin}/> </a>
                                      )}
                                      {socialMediaLinks.twitter && (
-                                        <a href="socialMediaLinks.twitter" target='_blank' className='text-2xl text-blue-400 hover:text-blue-600'><FaXTwitter /></a>
+                                        <a href="socialMediaLinks.twitter" target='_blank' className='text-2xl text-blue-400 hover:text-[#000] transition-all duration-300'> <FontAwesomeIcon icon={faXTwitter}/></a>
                                      )}
                                      {socialMediaLinks.instagram && (
-                                        <a href="socialMediaLinks.instagram" target='_blank' className='text-2xl text-blue-400 hover:text-blue-600'><FaInstagramSquare /></a>
+                                        <a href="socialMediaLinks.instagram" target='_blank' className='text-2xl text-blue-400 hover:text-blue-800 transition-all duration-300'> <FontAwesomeIcon icon={faInstagram}/></a>
                                      )}
                                      {socialMediaLinks.gitHub && (
-                                        <a href="socialMediaLinks.gitHub" target='_blank' className='text-2xl text-blue-400 hover:text-blue-600'><FaGithub /></a>
+                                        <a href="socialMediaLinks.gitHub" target='_blank' className='text-2xl text-blue-400 hover:text-[#171515] transition-all duration-300'><FontAwesomeIcon icon={faGithub}/> </a>
                                      )}
                             </div>
                         </div>

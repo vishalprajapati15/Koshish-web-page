@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* gradient color */
+/* :root {
+    --instagram-gradient: linear-gradient(45deg, 
+      #405DE6, 
+      #5B51D8, 
+      #833AB4, 
+      #C13584, 
+      #E1306C, 
+      #FD1D1D, 
+      #F56040, 
+      #777737, 
+      #FCAF45, 
+      #FFDC80);
+  }
+  .instagram-gradient {
+    background: var(--instagram-gradient);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  } */

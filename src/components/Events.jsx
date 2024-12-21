@@ -47,13 +47,13 @@ const cardData = [
 function Events() {
   return (
     <div className='bg-[#ccc] min-h-screen pb-[15vh]'>
-      <h1 className='text-[4em] text-center mb-[10vh] pt-8'> <b>Events</b> </h1>
-      <div className='flex flex-wrap justify-center place-items-center gap-8'>
+      <h1 className='text-[2em] md:text-[3em] lg:text-[4em] text-center font-bold mb-[5vh] pt-8'> <b>Events</b> </h1>
+      <div className=' flex flex-wrap justify-center items-center gap-6 lg:px-[5rem] md:px-14 sm:px-4 px-2'>
         {
           cardData.map(({id,img, title, desc}) =>{
             return (
-                  <div key = {id} className='text-white shadow-md rounded-lg overflow-hidden relative group mb-6'> 
-                      <img src= {img} alt="Event Image" className='w-full max-w-[300px] h-[350px] rounded-lg' />
+                  <div key = {id} className=' text-white shadow-md hover:rounded-3xl overflow-hidden relative group mb-6 transition-all duration-300'> 
+                      <img src= {img} alt="Event Image" className='w-full max-w-[300px] h-[350px] ' />
                       <div className='absolute left-0 top-[-100%] opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 group-hover:backdrop-blur-sm divide-neutral-500 duration-500'>
                           <div className='space-y-4'>
                             <Slide cascade>
